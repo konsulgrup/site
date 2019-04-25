@@ -10,16 +10,15 @@ $news_array = get_news();
 display_news_menu($news_array);
 ?>	
 <section class="landing">
-<div class="landing-top">
-<div class="landing-text">
+
 <?
-display_landing_text();
+display_main_part();
 ?>
-	</div>
+	
 <?
 display_form_zayavka();
 ?>
-</div>			
+		
 <? 
 display_vygody(); 
 display_sodeystvie();
