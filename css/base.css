@@ -59,10 +59,10 @@ header {
 	font-size: 0.9rem;  	
 }
 .kontakt { 	
-transform: rotate(-3deg);
+//transform: rotate(-3deg);
 	align-self: flex-start;
 	margin-right:-350px;
-	margin-top:50px;
+	margin-top:10px;
 	font-weight: 600;
 	text-align: right;
 	color:red;
