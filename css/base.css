@@ -1,7 +1,7 @@
 .home {
 	position:absolute;
 border-style: none;
-	left:10px;
+	//left:10px;
 	top:20px;
 	width:130px;
 	height: 150px;
@@ -34,18 +34,19 @@ header {
 }
 .logo {
 	background: url(../img/logo.gif) top left no-repeat;
-	background-size:120px;
-	background-position: 30% 0;
+	background-size:100px;
+	background-position: 30% 60px;
 	margin-right: auto;
-	margin-top:-10px;	border:thick white;
-	height: auto;
-	width:auto;		
+	//margin-top:-10px;
+	//border:thick white;
+	//height: auto;
+	//width:auto;		
 	align-self: center;
 }
 .logo p {	
-	border-top:medium solid white;
+	//border-top:medium solid white;
 	border-bottom:medium solid white;
-	margin-top: 100px;
+	margin-top: 10px;
 	margin-bottom: 0px;	
 	font-size: 1.5rem;  
 	color:white;
@@ -55,14 +56,15 @@ header {
 }
 .logo p:last-of-type {
 	margin-top:5px;
+	margin-bottom: 90px;
 	border:none;
 	font-size: 0.9rem;  	
 }
 .kontakt { 	
 //transform: rotate(-3deg);
 	align-self: flex-start;
-	margin-right:-350px;
-	margin-top:10px;
+	//margin-right:-350px;
+	margin-top:20px;
 	font-weight: 600;
 	text-align: right;
 	color:red;
@@ -73,16 +75,21 @@ header {
 .kontakt p a:visited {
  color:red;}
 .kontakt p {
+	background-image: url(../img/phone_banner.png);
+	background-size: 40px 40px;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
 	font-size:2em;
 	margin:0;	
-	text-shadow: 1px 1px black;
+	padding-left: 40px;
+	 text-shadow: 1px 1px black;
 }
 .banner {
  /* background: url(logo.gif) 10px 10px no-repeat, url(background_law.jpeg) center center no-repeat ;	*/
 	background: url(../img/background_law.jpeg) center center no-repeat ;
 	/*background-size:150px, cover;*/
   background-size:cover;
-	height: 200px;
+	//height: 200px;
     max-width:980px;
     margin: 0 auto;
 	padding: 10px 0;
@@ -479,7 +486,7 @@ footer {
 
 
 .form-div {
-	//background-color:rgba(168,93,10,0.30);
+	background-color:rgba(168,93,10,0.30);
 	padding-left:15px;
 	padding-right:15px;
 	padding-top:15px;

@@ -27,12 +27,9 @@ function do_html_header($title){
 				<p>юридические услуги</p>
 			</div>	
 			<span class=kontakt>
-				Горячая линия <p>8(499)112-113-0 </p> пн-сб 9:00 - 21:00
+				Горячая линия <p>(499)112-113-0 </p> пн-сб 9:00 - 21:00
 			</span>
-		 
-			<a class="top-menu" href="#">Наши успехи</a>
-			<a class="top-menu" href="#">Цены</a>
-			<a class="top-menu" href="#">Почему мы</a>			
+						
 		</div>
 	</header>
 <main>
