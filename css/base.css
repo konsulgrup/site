@@ -74,6 +74,7 @@ text-shadow: 1px 1px black;
 .kontakt p a:visited {
  color:red;}
 .kontakt p {
+	white-space: nowrap;
 	background-image: url(../img/phone_banner.png);
 	background-size: 60px 60px;
 	background-position: 0px 0px;
