@@ -71,17 +71,18 @@ header {
 	//border:thin dashed;
 	padding: 5px;	
 	text-transform: uppercase;	
+	font-size:1.1em;
 }
 .kontakt p a:visited {
  color:red;}
 .kontakt p {
 	background-image: url(../img/phone_banner.png);
-	background-size: 40px 40px;
+	background-size: 60px 60px;
 	background-position: 0px 0px;
 	background-repeat: no-repeat;
-	font-size:2em;
+	font-size:2.5em;
 	margin:0;	
-	padding-left: 40px;
+	padding-left: 60px;
 	 text-shadow: 1px 1px black;
 }
 .banner {
@@ -312,6 +313,9 @@ footer p {
 }
 
 @media (max-width: 768px) {	
+	.banner {
+		padding-left:0px;
+	}
 	.home {
 	position:absolute;
 	left:40px;
@@ -320,25 +324,22 @@ footer p {
 	height: 140px;
 }
 .logo {
-	background-size:100px;
-	background-position: 50% 0;	
+
 }
 .logo p {	
-	border-top:thin solid white;
-	border-bottom:thin solid white;
-	margin-top: 90px;	
-	font-size: 1.3rem;  	
+	
 }
 .logo p:last-of-type {
-	margin-top: 3px;	
-	font-size: 0.8rem;  	
+	
 }
-.kontakt { 
-	margin: 20px -300px;
-}
-.kontakt p {
-	font-size:1.5em;
+	.kontakt {
+	
+	}
 
+.kontakt p {
+font-size:2em;
+		background-size:45px 45px;
+	padding-left:45px;
 
 }
 .banner {
@@ -378,10 +379,11 @@ article {
 @media (max-width:500px){	
 .home {
 	position:absolute;
-	left:10px;
-	top:0px;
+	left:20px;
+	top:5px;
 	width:110px;
-	height: 120px;
+	height: 110px;
+	
 }
 .container{
 	margin:0;	
@@ -392,39 +394,37 @@ article {
 	background: url(../img/background_law_small.jpg) no-repeat;
 	background-size:cover;
 	background-position: 40%;
-	flex-flow: row nowrap;	
-			
-	height: 160px;
+	flex-flow: row nowrap;				
+	height: 120px;
 	padding:0;	
 	}
-.banner a {
-	font-size:0.7em;
-	font-weight: 600;
-	}
+
 .logo {
-	
-	margin-left:0px;
-	align-self: flex-start;
-	background-position: 40% 20%;
-	background-size: 70%;
+	height: 130px;
+	width:auto;
+	background-position: center 60px;
+	background-size: 60%;
+	    
+    margin-left: -10px;
 	
 	}
-.logo p {	
-	border-color: white;
-	color:white;
-	font-weight: 600;
+.logo p {
+	
 	background-color: rgba(0,0,0,0.30);
-	font-size:90%;
+	
 	}	
 .logo p:first-of-type {
-	font-size:1.1em;		
+	font-weight: 600;
+	font-size:1.2em;		
 	}
-.kontakt { 	
-	margin: 10px -225px;
-	transform: rotate(3deg);
-	color:red;
-}
-
+	.kontakt {
+		margin-top:5px;
+	}
+	.kontakt p{
+			background-size:35px 35px;
+	padding-left:35px;
+		font-size: 1.5em;
+	}
 
 
 .landing {
