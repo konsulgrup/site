@@ -634,3 +634,37 @@ form label.error {
 	display:block;
 	color:red;
 }
+
+
+/*----таблица-----*/
+.inventory {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+  margin-top: 25px;
+  border-collapse: collapse;
+}
+.inventory caption {
+  text-align: right;
+  font-size: .85em;
+  margin-bottom: 10px;
+}
+.inventory td, .inventory th {
+  font-size: 1.1em;
+  border: 1px solid #DDB575;
+  padding: 3px 7px 2px 7px;
+}
+.inventory th {
+  text-transform:uppercase;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background: rgb(229,76,16);
+  background: linear-gradient(to bottom, rgb(229,76,16), rgb(173,54,8));
+  color: white;
+}
+.inventory tr:nth-of-type(even){
+  background-color: rgba(255,255,255,.1);
+}
+.inventory tr:nth-of-type(odd){
+  background-color: rgba(229,76,16,.1);
+}

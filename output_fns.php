@@ -299,7 +299,64 @@ function display_main_part() {
 			<p>Хмельницкая Елена</p>
 	</div> <!-- panel1-->
 	<div id="panel2">
-		  <p>panel2</p>
+		  <h2>Прейскурант наших услуг</h2>
+	<table class="inventory" width="100%">
+		
+		<colgroup>
+			<col id="product">
+			<col id="price">
+		
+		</colgroup>
+		<tr>
+			<th scope="col">Услуга</th>
+			<th scope="col">Стоимость</th>
+	
+		</tr>
+		<tr>
+			<td> Vitae Quam Lorem</td>
+			<td>$19.95</td>
+			
+		</tr>
+		<tr>
+			<td> In Tempus Velit</td>
+			<td>$14.55</td>
+			
+		</tr>
+		<tr>
+			<td>Lorem Ipsum Dolor Sat</td>
+			<td>Priceless</td>
+			
+		</tr>
+		<tr>
+			<td>Quis Felis Fringilla</td>
+			<td>$29.95</td>
+			
+		</tr>
+		<tr>
+			<td>Nunc Sem Pharetra</td>
+			<td>$75.99</td>
+			
+		</tr>
+		<tr>
+			<td>Vel Faucibus Elit</td>
+			<td>$82.00</td>
+			
+		</tr>
+		<tr>
+			<td> Non Adipiscing Vitae</td>
+			<td>$1.95</td>
+			
+		</tr>
+		<tr>
+			<td>Aenean Orci Ante</td>
+			<td>$17.95</td>
+			
+		<tr>
+			<td>Venenatis Non Adipiscing</td>
+			<td>$44.00</td>
+			
+		</tr>
+	</table>
 	</div> <!-- panel2-->
 	<div id="panel3">
 		<p>panel3</p>
