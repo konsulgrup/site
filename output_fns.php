@@ -54,8 +54,8 @@ function do_html_footer() {
 <script>	
 $(document).ready(function(){
 	$('.landing-text').tabs({
-		show: 'clip',
-  	hide: 'clip'
+		show: 'fade',
+  	hide: 'fade'
 	});
 	$(".date").datepicker({
 	dateFormat:'yy-mm-dd'
