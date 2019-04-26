@@ -68,7 +68,7 @@ header {
 	font-weight: 600;
 	text-align: right;
 	color:red;
-	border:thin dashed;
+	//border:thin dashed;
 	padding: 5px;	
 	text-transform: uppercase;	
 }

@@ -8,18 +8,8 @@ $voprosy_array = get_voprosy();
 display_voprosy_menu($voprosy_array);
 $news_array = get_news();
 display_news_menu($news_array);
-?>	
-<section class="landing">
-
-<?
 display_main_part();
-?>
-	
-<?
 display_form_zayavka();
-?>
-		
-<? 
 display_vygody(); 
 display_sodeystvie();
 do_html_footer();

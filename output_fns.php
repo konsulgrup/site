@@ -27,7 +27,7 @@ function do_html_header($title){
 				<p>юридические услуги</p>
 			</div>	
 			<span class=kontakt>
-				Горячая линия <p>(499)112-113-0 </p> пн-сб 9:00 - 21:00
+				Горячая линия <p>(499)113-112-0 </p> пн-сб 9:00 - 21:00
 			</span>
 						
 		</div>
@@ -40,7 +40,7 @@ function do_html_header($title){
 } //end of do_html_header
 function do_html_footer() {
   // Вывести нижний колонтитул HTML
-?> </section>
+?> </section> <!-- landing -->
 		</main>
 	<footer>
 		<p>Консул-Групп.Все права защищены. 2008</p>	
@@ -49,12 +49,16 @@ function do_html_footer() {
     display_button("admin.php", "admin-menu", "Меню администрирования");			  
   } ?>
 	</footer>
-</div>
+</div> <!-- container -->
 
 <script>	
 $(document).ready(function(){
+	$('.landing-text').tabs({
+		show: 'slideDown',
+  	hide: 'slideUp'
+	});
 	$(".date").datepicker({
-		dateFormat:'yy-mm-dd'
+	dateFormat:'yy-mm-dd'
 	});
 	$("#hello").dialog({
 		autoOpen: false,
@@ -149,7 +153,7 @@ $(document).ready(function(){
 <!-- /Yandex.Metrika counter -->
 	<div id="hello" title="Запрос получен!">
 				<p>Ответ на Ваш запрос Вы получите в течение ближайшего часа.</p>
-			</div>
+			</div> <!-- hello -->
 
 </body>
 </html>
@@ -253,6 +257,7 @@ function display_form_zayavka(){
 			<p class="form-message"></p>
 			<div class="ease"></div>
 		</form>
+</div> <!-- landing-top -->
 <?
 }
 function display_vygody() {
@@ -262,7 +267,8 @@ function display_vygody() {
 				<figure><img src="img/vyg_rez.png"><figcaption>Результат<br /> Более 1500 положительных решений по суду</figcaption></figure>
 				<figure><img src="img/vyg_prof.png"><figcaption>Профессионализм<br /> Команда опытных юристов, готовых решать вопросы любой сложности</figcaption></figure>
 				<figure><img src="img/vyg_rep.png"><figcaption>Репутация<br /> Наша цель - ваши рекомендации</figcaption></figure>		
-			</div>
+			</div> <!-- vygody-->
+
 <?
 }
 function display_sodeystvie() {
@@ -272,18 +278,33 @@ function display_sodeystvie() {
 				<figure><img src="img/gerb_potrnadz.png"><figcaption>Роспотребнадзора Российской Федерации</figcaption></figure>
 				<figure><img src="img/gerb_moskvy.png"><figcaption>Правительства Москвы</figcaption></figure>
 				<figure><img src="img/gerb_nalog.png"><figcaption>Федеральной налоговой службы</figcaption></figure>			
-			</div>	
+			</div>	<!-- sodeystvie -->
 <?
 }
 function display_main_part() {
 	?>
+<section class="landing">
 <div class="landing-top">
 <div class="landing-text">
+	<ul>
+				  <li><a href="#panel1">О нас</a></li>
+				  <li><a href="#panel2">Цены</a></li>
+				  <li><a href="#panel3">Наши победы</a></li>
+				  </ul>
+	<div id="panel1">
 		  <img src="img/lawyer.jpg" width="200" height="200" alt=""/>
 			<p>Дорогие друзья, мы рады приветсвовать вас на нашем сайте! </p><p> Юридическое бюро КонсулГрупп создано для того чтобы помочь вам решить проблемы в области права. </p><p>За 20 лет работы в сфере юридических услуг наши специлаисты стали настоящими профессионалами. Результат такого подхода - успешные решения по сотням дел различных областей и направлений.  </p>
 			<p>Мы ценим наших клиентов, ведь отличная репутация - наша главная цель! Доверьте нам решение ваших проблем!</p>
 			<p>Генеральный директор ООО "Консул-групп"</p>
 			<p>Хмельницкая Елена</p>
+	</div> <!-- panel1-->
+	<div id="panel2">
+		  <p>panel2</p>
+	</div> <!-- panel2-->
+	<div id="panel3">
+		<p>panel3</p>
+	</div> <!-- panel3-->
+	</div> <!-- landing-text-->
 		<?
 }
 function display_articles($article_array) {
