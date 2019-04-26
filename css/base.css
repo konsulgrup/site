@@ -43,7 +43,7 @@ header {
 
 
 .logo p {	
-
+text-shadow: 1px 1px black;
 	border-bottom:medium solid white;
 	margin-top: 10px;
 	margin-bottom: 0px;	
@@ -323,17 +323,18 @@ footer p {
 }
 .logo {
 	background-size:100px;
-	background-position: 50% 0;	
+	background-position: center 60px;	
 }
 .logo p {	
-	border-top:thin solid white;
+	
 	border-bottom:thin solid white;
-	margin-top: 90px;	
-	font-size: 1.3rem;  	
+	
+	margin-top: 0px;	
+	font-size: 1.5rem;  	
 }
 .logo p:last-of-type {
 	margin-top: 3px;	
-	font-size: 0.8rem;  	
+	font-size: 0.9rem;  	
 }
 
 .kontakt p {
@@ -404,8 +405,8 @@ article {
 	font-weight: 600;
 	}
 .logo {
-	height: 130px;
-	width:auto;
+	
+	
 	background-position: center 60px;
 	background-size: 60%;
 	    
@@ -415,9 +416,10 @@ article {
 	
 	}	
 .logo p:first-of-type {
-font-weight: 600;
-	font-size:1.2em;			
-	}
+margin-top:10px;
+	font-weight: 600;
+font-size:1.2em;			
+}
 .kontakt { 	
 	margin-top:5px;
 }
@@ -426,7 +428,7 @@ font-weight: 600;
 	background-size:35px 35px;
 	padding-left:40px;
 	font-size: 1.4em;
-	font-size:1.1em;		
+	
 	}
 
 .landing {
