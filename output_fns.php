@@ -27,7 +27,7 @@ function do_html_header($title){
 				<p>юридические услуги</p>
 			</div>	
 			<span class=kontakt>
-				Горячая линия <p>(499)113-112-0 </p> пн-сб 9:00 - 21:00
+				Горячая линия <a href="tel:+74991131120"><p>(499)113-112-0</p></a> пн-сб 9:00 - 21:00
 			</span>
 						
 		</div>
@@ -245,7 +245,7 @@ echo "<ul>";
 function display_form_zayavka(){
 	?>
 <form class="form-div" id="zayavka" method="post" action="test.php">	
-			<p>Опишите проблему! Наши юристы ответят Вам <u>в течение часа</u>. Для связи необходимо оставить адрес Вашей <u>электронной почты</u> или контактный <u>телефон</u>. Либо Вы всегда можете позвонить нам по номеру <br /><strong>8(499)112-113-0</strong> </p>
+			<p>Опишите проблему! Наши юристы ответят Вам <u>в течение часа</u>. Для связи необходимо оставить адрес Вашей <u>электронной почты</u> или контактный <u>телефон</u>. Либо Вы всегда можете позвонить нам по номеру <br /><strong>8(499)113-112-0</strong> </p>
 			<input id="name" name="name" type="text" class="feedback-input" placeholder="Имя"/>  
 			Выберите способ связи:<br />
 			<input id="p" name="back" type="radio" value="phone" checked="checked" ><label for="p">Телефон</label>

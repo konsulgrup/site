@@ -71,8 +71,12 @@ text-shadow: 1px 1px black;
 	text-transform: uppercase;	
 	font-size:1.1em;
 }
-.kontakt p a:visited {
+.kontakt a:visited {
  color:red;}
+.kontakt a {
+ color:red;
+text-decoration: none;}
+
 .kontakt p {
 	white-space: nowrap;
 	background-image: url(../img/phone_banner.png);
@@ -423,12 +427,17 @@ font-size:1.2em;
 }
 .kontakt { 	
 	margin-top:5px;
+	
 }
-
+.kontakt {
+	
+	font-size: 1em;
+	
+	}
 .kontakt p{
-	background-size:30px 30px;
-	padding-left:30px;
-	font-size: 1.4em;
+	background-size:25px 25px;
+	padding-left:25px;
+	font-size: 1.7em;
 	
 	}
 
