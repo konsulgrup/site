@@ -299,7 +299,7 @@ function display_main_part() {
 			<p>Хмельницкая Елена</p>
 	</div> <!-- panel1-->
 	<div id="panel2">
-		  <h2>Прейскурант наших услуг</h2>
+		  
 	<table class="inventory" width="100%">
 		
 		<colgroup>
