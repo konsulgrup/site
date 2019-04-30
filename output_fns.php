@@ -14,7 +14,6 @@ function do_html_header($title){
 <script src="js/jquery-ui.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script src="js/mobileRU.js"></script>
-
 	</head>
 
 <body >
@@ -50,8 +49,50 @@ function do_html_footer() {
   } ?>
 	</footer>
 </div> <!-- container -->
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
 
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 <script>	
+
 $(document).ready(function(){
 	$('.landing-text').tabs({
 		show: 'fade',
@@ -359,7 +400,74 @@ function display_main_part() {
 	</table>
 	</div> <!-- panel2-->
 	<div id="panel3">
-		<p>panel3</p>
+<!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="img/img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="img/img2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="img/img3.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="img/img4.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img/img1_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img/img2_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/img3_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/img4_wide.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="img/img1.jpg" onclick="currentSlide(1)" alt="1">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img/img2.jpg" onclick="currentSlide(2)" alt="2">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img/img3.jpg" onclick="currentSlide(3)" alt="3">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="img/img4.jpg" onclick="currentSlide(4)" alt="4">
+    </div>
+  </div>
+</div>
 	</div> <!-- panel3-->
 	</div> <!-- landing-text-->
 		<?
