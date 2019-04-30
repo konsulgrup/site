@@ -400,6 +400,7 @@ function display_main_part() {
 	</table>
 	</div> <!-- panel2-->
 	<div id="panel3">
+		<br />
 <!-- Images used to open the lightbox -->
 <div class="row">
   <div class="column">
