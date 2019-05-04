@@ -1,7 +1,7 @@
 .home {
 	position:absolute;
 border-style: none;
-	//left:10px;
+	/*left:10px;*/
 	top:0px;
 	width:130px;
 	height: 140px;
@@ -126,21 +126,25 @@ text-decoration: none;}
   color: black;
 }
 main {
+	position: relative;
 	 background-color: white;
 	justify-content: space-between;
 	max-width: 980px;
 	margin:0 auto;
-	display: flex;
-	flex-flow:row wrap;
+	min-height: 600px;
+	padding-bottom: 20px;
 	
 }
 main >* {
-margin:10px;
+
 
 padding: 10px 10px 0 10px;
 }
+
 aside {
-	flex: 0 0 200px;
+	width:250px;
+	float:left;
+	
 	
 }
 aside *{
@@ -199,6 +203,9 @@ font-weight: 600;
 
 }
 */
+
+
+
 .voprosy ul li  {
 list-style-type: circle;
 	margin-left:10px;
@@ -208,9 +215,13 @@ list-style-type: none;
 font-weight: 600;
 
 }
+article {
+	margin-left: 260px;
+	margin-right: 10px;
+}
 .landing {
-	flex:2 1 450px;
-	margin-left: 0px;
+	clear:right;
+	margin-left: 220px;
 }
 /*.landing p {
 	margin-bottom:30px;
@@ -243,7 +254,7 @@ box-shadow: 4px 4px gray;
 .sodeystvie {
 	padding:0 30px;
 	text-align: justify;
-	rgba(181,200,204,1.00);
+	/*rgba(181,200,204,1.00);*/
 }
 .sodeystvie figure {
 display: inline-block;
@@ -300,16 +311,14 @@ text-align: center;
 }
 
 
-article {
-	border-top:2px ridge gray;
-	flex: 2 1 800px;
-	order:2;
-	}
+
 footer {
 	height:100px;
 	background: black;
 	color:white;
 	padding:20px;	
+	
+	
 }
 footer p {
 	margin-left:10px;
@@ -364,9 +373,20 @@ nav a {
 		font-size:90%;
 		font-weight: 600;
 }
-.landing {
-		order:-1; 
-		flex:1 1 600px;
+.form-toggle {
+top:-5px;
+ right: 10px;
+	background-color: white;
+	padding:0;
+}
+.form-toggle a{
+	font-size: 1em;
+}
+aside{
+	width:200px;
+	}
+article {
+	margin-left:210px;
 	}
 .sodeystvie figure {
 	width: 90px;
@@ -376,16 +396,7 @@ nav a {
 	
 }
 	
-aside {	
-	flex:1 1 170px;
-	margin-right: 0px;
-	padding-right:0px;
-}
-article {
-	margin-top:0;
-	padding-top:0;
-	flex:3 1 250px;
-	}
+
 }
 @media (max-width:500px){	
 .home {
@@ -403,7 +414,7 @@ article {
 .banner {
 	background: url(../img/background_law_small.jpg) no-repeat;
 	background-size:cover;
-	background-position: 40%;
+	background-position: 0;
 	flex-flow: row nowrap;	
 			
 	height: 120px;
@@ -417,7 +428,7 @@ article {
 	
 	
 	background-position: center 60px;
-	background-size: 60%;
+	background-size: 70%;
 	    
     margin-left: -10px;
 	}
@@ -443,8 +454,27 @@ font-size:1.2em;
 	font-size: 2em;
 	text-shadow: 1px 1px black;
 	}
+aside {
+	padding-top: 20px;
+	float:none;
+	width:auto;
+}	
+nav { 
+	float:left;
+	width:auto;
 
+	}	
+	nav a {
+		padding:0 10 0 0;
+	}
+
+article {
+	clear:both;
+	padding:0 10px;
+	margin: 0;
+}
 .landing {
+	clear:both;
 	margin:0;
 	padding:0;
 	}
@@ -452,10 +482,7 @@ font-size:1.2em;
 	margin-bottom:0;
 	font-size: 1.1em;
 }
-	.form-div {
-		margin:5px 5px;
-		
-	}
+
 .sodeystvie {
 		text-align: center;		
 	}
@@ -479,17 +506,6 @@ text-align: center;
 }
 
 
-nav { 
-		margin-right: 20px;
-		text-align: center;		
-	}	
-aside p {
-		text-align: center;
-}	
-
-article {
-	padding:0;
-}
 footer {
 	height:100px;
 	background: black;
@@ -499,17 +515,45 @@ footer {
 }
 
 /*-------form----------------------*/
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);*/
 
-
+.form-toggle {
+	position:absolute;
+ right: 10px;
+	z-index: 1;
+}
+.form-toggle a{
+	float:right;
+	text-transform: uppercase;
+	font-weight: 600;
+	text-decoration: none;
+	color:black;
+	display:block;
+	border:solid 1px black;
+	padding:2px;
+}
+.form-toggle a:hover{
+	background-color: red;
+	color:white;
+	
+}
 .form-div {
-	background-color:rgba(168,93,10,0.30);
+	display:none;
+	background-color:rgba(30,13,2,1.00);
+	color:white;
 	padding-left:15px;
 	padding-right:15px;
 	padding-top:15px;
 	padding-bottom:25px;	
-	flex: 1 1 200px;		
+	width:300px;
+	position:absolute;
+	right:10px;
+	top:30px;
+	margin:10 10 0 10;
+	z-index: 1;
+	font-size: 1.2em;
 }
+
  /*
 #form-div p {
 	margin-bottom:5px;}*/
@@ -671,8 +715,8 @@ form label.error {
   text-align: left;
   padding-top: 5px;
   padding-bottom: 4px;
-  //background: rgb(229,76,16);
-  //background: linear-gradient(to bottom, rgb(229,76,16), rgb(173,54,8));
+  /*background: rgb(229,76,16);
+  background: linear-gradient(to bottom, rgb(229,76,16), rgb(173,54,8));*/
   color: black;
 }
 .inventory tr:nth-of-type(even){

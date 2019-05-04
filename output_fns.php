@@ -39,7 +39,7 @@ function do_html_header($title){
 } //end of do_html_header
 function do_html_footer() {
   // Вывести нижний колонтитул HTML
-?> </section> <!-- landing -->
+?> 
 		</main>
 	<footer>
 		<p>Консул-Групп.Все права защищены. 2008</p>	
@@ -50,50 +50,13 @@ function do_html_footer() {
 	</footer>
 </div> <!-- container -->
 <script>
-// Open the Modal
-function openModal() {
-  document.getElementById('myModal').style.display = "block";
-}
-
-// Close the Modal
-function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
-<script>	
 
 $(document).ready(function(){
+	$('.form-toggle a').click(function(){
+		//var checkedValue = $('.form-div').css('display');
+		//$('.form-div').show();
+		$(".form-div").toggle();
+	});
 	$('.landing-text').tabs({
 		show: 'fade',
   	hide: 'fade'
@@ -283,10 +246,17 @@ echo "<ul>";
 	echo "</nav>";
   
 }
+function display_form_toggle(){
+	?>
+
+<?
+}
 function display_form_zayavka(){
 	?>
+<div class="form-toggle"><a href="#">Задать вопрос онлайн</a>	</div>
 <form class="form-div" id="zayavka" method="post" action="test.php">	
-			<p>Опишите проблему! Наши юристы ответят Вам <u>в течение часа</u>. Для связи необходимо оставить адрес Вашей <u>электронной почты</u> или контактный <u>телефон</u>. Либо Вы всегда можете позвонить нам по номеру <br /><strong>8(499)113-112-0</strong> </p>
+			
+	<p>Опишите проблему! Наши юристы ответят Вам <u>в течение часа</u>. Для связи необходимо оставить адрес Вашей <u>электронной почты</u> или контактный <u>телефон</u>. Либо Вы всегда можете позвонить нам по номеру: <strong>8(499)113-112-0</strong> </p>
 			<input id="name" name="name" type="text" class="feedback-input" placeholder="Имя"/>  
 			Выберите способ связи:<br />
 			<input id="p" name="back" type="radio" value="phone" checked="checked" ><label for="p">Телефон</label>
@@ -298,11 +268,14 @@ function display_form_zayavka(){
 			<p class="form-message"></p>
 			<div class="ease"></div>
 		</form>
-</div> <!-- landing-top -->
+
+
 <?
 }
 function display_vygody() {
 	?>
+
+
 <div class=vygody><p>Обратившись к нам Вам обеспечены</p>
 				<figure><img src="img/vyg_eco.png"><figcaption>Экономия <br />Вам не придется платить дважды. Наш опыт позволит привести траты к минимуму</figcaption></figure>
 				<figure><img src="img/vyg_rez.png"><figcaption>Результат<br /> Более 1500 положительных решений по суду</figcaption></figure>
@@ -320,6 +293,7 @@ function display_sodeystvie() {
 				<figure><img src="img/gerb_moskvy.png"><figcaption>Правительства Москвы</figcaption></figure>
 				<figure><img src="img/gerb_nalog.png"><figcaption>Федеральной налоговой службы</figcaption></figure>			
 			</div>	<!-- sodeystvie -->
+</section> <!-- landing -->
 <?
 }
 function display_main_part() {
@@ -471,10 +445,12 @@ function display_main_part() {
 </div>
 	</div> <!-- panel3-->
 	</div> <!-- landing-text-->
+	</div> <!-- landing-top -->
 		<?
 }
 function display_articles($article_array) {
   // Выводит все книги, переданные в массиве
+	echo "<section class=\"landing\">";
   if (!is_array($article_array)) {
     echo "<br />В настоящий момент нет статей в этой категории<br />";
   } else {
@@ -493,9 +469,10 @@ function display_articles($article_array) {
 		do_html_url($url, $title);
 	  echo "<br />";
      echo $row['descript'];
-	echo '</p>';	
+	echo '</p>';
+		
     }
-  
+  echo "</section>";
   }
 
 }

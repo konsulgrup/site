@@ -10,9 +10,7 @@ session_start();
 
   // Извлечь из базы данных информацию о конкретной статье
 
-  $article = get_the_article($id);
-  do_html_header($article['title']);
-  display_the_article($article);
+ do_html_header($article['title']);
 
   // Установить URL для кнопки "Продолжить"
   $target = "index.php";
@@ -31,13 +29,14 @@ $voprosy_array = get_voprosy();
 display_voprosy_menu($voprosy_array);
 $news_array = get_news();
 display_news_menu($news_array);
+  $article = get_the_article($id);
+//display_form_toggle();
+	 display_form_zayavka();
+  display_the_article($article);
 
-display_main_part();
 
-display_form_zayavka();
 
-display_vygody(); 
-display_sodeystvie();
+
   }
 
 do_html_footer();
