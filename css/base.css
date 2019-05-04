@@ -464,13 +464,14 @@ nav {
 	float:left;
 	width:180px;
 	margin-right: 5px;
-border-right: solid 1px black;
+
 	}	
 	nav a {
 		padding:0 10 0 0;
 	}
 aside ul {
 	padding-left: 0;
+	list-style-type:none;
 	}
 article {
 	clear:both;
