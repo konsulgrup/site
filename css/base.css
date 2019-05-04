@@ -459,14 +459,18 @@ aside {
 	float:none;
 	width:auto;
 }	
+
 nav { 
 	float:left;
 	width:180px;
-	margin-right: 10px;
+	margin-right: 5px;
 border-right: solid 1px black;
 	}	
 	nav a {
 		padding:0 10 0 0;
+	}
+aside ul {
+	padding-left: 0;
 	}
 article {
 	clear:both;
