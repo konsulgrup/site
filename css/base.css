@@ -463,7 +463,7 @@ nav {
 	float:left;
 	width:180px;
 	margin-right: 10px;
-
+border-right: solid 1px black;
 	}	
 	nav a {
 		padding:0 10 0 0;
