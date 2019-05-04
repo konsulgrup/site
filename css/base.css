@@ -461,13 +461,13 @@ aside {
 }	
 nav { 
 	float:left;
-	width:auto;
+	width:180px;
+	margin-right: 10px;
 
 	}	
 	nav a {
 		padding:0 10 0 0;
 	}
-
 article {
 	clear:both;
 	padding:0 10px;
