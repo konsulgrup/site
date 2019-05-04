@@ -168,6 +168,7 @@ aside p, nav p {
 	margin: 15px 0 5px 0;
 }
 nav a { 
+	white-space: nowrap;
 	display: block;
 	text-transform: uppercase; 
 	font-weight: 600;
