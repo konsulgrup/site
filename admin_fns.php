@@ -112,6 +112,12 @@ function display_article_form($article = '') {
         echo $edit ? $article['title'] : '';
       ?>" /></td>
     </tr>
+	  <tr>
+      <td>Картинка:</td>
+      <td><input type="text" name="isbn" value="<?php
+        echo $edit ? $article['isbn'] : '';
+      ?>" /></td>
+    </tr>
     <tr>
       <td>Описание:</td>
       <td><textarea rows="5" cols="100" name="descript" maxlength="200"><?php echo $edit ? $article['descript'] : ''; ?></textarea></td>
@@ -167,7 +173,7 @@ if (!$edit) { echo "colspan=2"; }?> align="center">
   
 <?php
 }
-function insert_article($title, $descript, $catid, $text){
+function insert_article($title,$isbn, $descript, $catid, $text){
    $conn = db_connect();
 
    /* Проверить, не существует ли уже такая книга
@@ -181,7 +187,7 @@ function insert_article($title, $descript, $catid, $text){
  */
    // Добавить новую книгу
    $query = "insert into articles values
-            ('', '$title', '$descript', '$catid', '$text')";
+            ('', '$title', '$isbn',$descript', '$catid', '$text')";
   
    $result = $conn->query($query);
    if (!$result)
@@ -189,11 +195,12 @@ function insert_article($title, $descript, $catid, $text){
    else
      return true;
 }
-function update_article($id,$title, $descript, $catid, $text){
+function update_article($id,$title, $isbn,$descript, $catid, $text){
    $conn = db_connect();
 //echo "ooo id is $id, title is $title, descript is $descript, catid is $catid, text is $text </br>";
    $query = "update articles
              set title ='$title',
+			 isbn='$isbn',
              descript = '$descript',
              catid = '$catid',
              text = '$text'

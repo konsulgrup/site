@@ -13,8 +13,9 @@ if (check_admin_user()) {
     $descript = $_POST['descript'];
     $catid = $_POST['catid'];
     $text = $_POST['text'];
+	  $isbn = $_POST['isbn'];
 
-    if (update_article($id,$title, $descript, $catid, $text)) {
+    if (update_article($id,$title,$isbn, $descript, $catid, $text)) {
       echo 'Сведения о статье обновлены.<br />';
     } else {
       echo 'Невозможно обновить сведения о статье.<br />';

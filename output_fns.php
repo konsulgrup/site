@@ -459,17 +459,15 @@ function display_articles($article_array) {
     // Создать строку таблицы для каждой книги 
     foreach ($article_array as $row) {
       $url = "show_article.php?id=".($row['id']);
-     
-      if (@file_exists('images/'.$row['isbn'].'.jpg')) {
-        $title = '<img src=\'images/'.($row['isbn']).'.jpg\' border=0 />';
-        do_html_url($url, $title);
+		echo "<div class=art_block>";
+     $title='';
+      if (@file_exists('img/'.$row['isbn'].'.jpg')) {
+        $title .= '<div class=art_isbn><img src=\'img/'.($row['isbn']).'.jpg\' border=0 /></div>';     
       } 
-      $title = $row['title'];
-     echo '<p>';
+      $title .='<div class=art_title><h2>'.$row['title'].'</h2></div><div class=art_desc>'.$row['descript'].'</div>';
+  
 		do_html_url($url, $title);
-	  echo "<br />";
-     echo $row['descript'];
-	echo '</p>';
+	  echo "</div>";
 		
     }
   echo "</section>";

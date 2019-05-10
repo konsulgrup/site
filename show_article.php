@@ -9,7 +9,7 @@ session_start();
  $id = $_GET['id'];
 
   // Извлечь из базы данных информацию о конкретной статье
-
+$article = get_the_article($id);
  do_html_header($article['title']);
 
   // Установить URL для кнопки "Продолжить"
@@ -29,15 +29,15 @@ $voprosy_array = get_voprosy();
 display_voprosy_menu($voprosy_array);
 $news_array = get_news();
 display_news_menu($news_array);
-  $article = get_the_article($id);
+  
 //display_form_toggle();
 	 display_form_zayavka();
-  display_the_article($article);
+ 
 
 
 
 
   }
-
+ display_the_article($article);
 do_html_footer();
 ?>

@@ -11,7 +11,7 @@ border-style: none;
 	cursor:pointer;
 }
 html {
-  font-size: 70%;
+  font-size: 80%;
 }
 body {
   background-color: rgba(228,228,228,1.00);
@@ -20,6 +20,14 @@ body {
   font-weight: 400;
   font-family:"HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
+}
+.left{
+	float:left;
+	margin-right: 5px;
+}
+.right{
+	float:right;
+	margin-left:5px;
 }
 header { 
   color: white;	
@@ -142,7 +150,7 @@ padding: 10px 10px 0 10px;
 }
 
 aside {
-	width:250px;
+	width:200px;
 	float:left;
 	
 	
@@ -220,9 +228,40 @@ article {
 	margin-left: 260px;
 	margin-right: 10px;
 }
+.art_block{
+	    border-style: outset;
+  
+    padding: 5px;
+    margin: 5px;
+}
+
+.art_title{
+	display: inline-block;
+	
+}
+.art_isbn{
+	
+	width:100px;;
+	display: inline-block;
+}
+.art_desc {
+
+	text-decoration: none;
+	display:inline-block;
+	color:black;
+}
 .landing {
 	clear:right;
 	margin-left: 220px;
+}
+.landing h2{
+	text-decoration: none;
+	display: inline-block;	
+	color:black;
+}
+.landing h2:hover{
+	text-decoration: underline;
+
 }
 /*.landing p {
 	margin-bottom:30px;
